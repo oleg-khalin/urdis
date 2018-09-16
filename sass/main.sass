@@ -1,0 +1,286 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import 'app/libs/superfish/dist/css/superfish'
+@import 'app/libs/font-awesome/scss/font-awesome'
+@import 'app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all'
+@import 'app/libs/magnific-popup/dist/magnific-popup'
+@import 'app/css/magnific-custom'
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+.mm-menu
+	&.mm-offcanvas
+		z-index: 4
+	.fa
+		display: none
+
+.sect-services
+	background-color: #efefef
+	.col-md-3
+		padding: 0
+.service-item
+	border: solid 5px lighten($main-color, 6%)
+	transition: .5s all ease
+	text-align: center
+	background-color: #fff
+	padding-bottom: 32px
+	&-image
+		min-height: 190px
+		background-size: cover
+		position: relative
+		display: block
+		&::before
+			position: absolute
+			content: ''
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: $main-color
+			opacity: 0
+			transition: all .5s ease
+		.fa
+			font-size: 30px
+			color: #fff
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			opacity: 0
+			transition: all .5s ease
+	h4
+		font-size: 18px
+		margin-bottom: 10px
+	&-stars
+		font-size: 11px
+		color: #b4b4b4
+		.fa
+			margin-left: 1px
+			transition: all .5s ease
+	&-price
+		margin-top: 5px
+		margin-bottom: 25px
+		font-size: em(17px)
+		font-family: 'RobotoBold', sans-serif
+		span
+			font-size: em(28px)
+		.fa
+			color: $accent-color
+			font-size: 18px
+	&:hover
+		z-index: 2
+		transform: scale(1.05)
+		box-shadow: rgba(0,0,0,.35) 0 0  32px
+		border-color: $accent-color
+		.service-item
+			&-stars
+				color: $accent-color
+				.fa
+					margin: 0 3px
+		a.service-item-image
+			&::before
+				opacity: .7
+			.fa
+				opacity: .5
+
+
+.sect-universal
+	background-color: #efefef
+	padding: 60px 0
+	background-size: cover
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: .85
+	h2
+		margin-bottom: 45px
+		font-size: em(40px)
+		line-height: em(18px)
+
+
+.sect-news
+	background-image: url(../img/news-bg.jpg)
+	color: #fff
+	&::before
+		background-color: $main-color
+
+.new-item
+	background-color: #efefef
+	padding: 1px 1px 32px 1px
+	text-align: center
+	color: #111
+	margin: 20px 0
+	h4, p
+		padding: 0 20px
+	h4
+		margin-bottom: 12px
+	p
+		font-size: em(14px)
+		margin-top: 0
+	&-image
+		min-height: 180px
+		background-size: cover
+		position: relative
+		display: block
+		&::before
+			position: absolute
+			content: ''
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: $main-color
+			opacity: 0
+			transition: all .5s ease
+		.fa
+			font-size: 30px
+			color: #fff
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			opacity: 0
+			transition: all .5s ease
+	&-text
+		margin-bottom: 28px
+	&:hover
+		.new-item-image
+			&::before
+				opacity: .7
+			.fa
+				opacity: .5
+
+
+.link-item
+	display: block
+	padding: 14px
+	border: $accent-color 4px solid
+	background-color: #fff
+	color: #111
+	margin-top: 15px
+	margin-bottom: 15px
+	img
+		width: 34px
+		height: auto
+		float: left
+		margin-right: 10px
+	.h4
+		text-decoration: underline
+		line-height: 18px
+		font-size: 16px
+		display: block
+	&:hover
+		text-decoration: none
+		.h4
+			text-decoration: none
+
+
+
+.main-foot
+	background-color: #0e0b13
+	padding: 60px 0 30px
+	color: #fff
+	.logo
+		opacity: .4
+	.foot-about
+		opacity: .3
+		font-size: em(11px)
+		margin-top: 28px
+		margin-bottom: 40px
+	.top-pannel-box
+		margin-bottom: 25px
+		li
+			min-width: 100%
+			opacity: .6
+			margin-bottom: 18px
+			font-size: em(13px)
+			display: block
+			transition: all .5s ease
+			a
+				color: #fff
+				text-decoration: underline
+				display: block
+				.fa
+					top: 3px
+			&:hover
+				opacity: 1
+				.fa
+					opacity: .8
+				a
+					text-decoration: none
+			.fa
+				opacity: .4
+				transition: all .5s ease
+		.foot-menu
+			li
+				margin-bottom: 8px
+
+.popup-form
+	position: relative
+	max-width: 320px
+	h3
+		text-align: center
+	label, input
+		display: block
+		width: 100%
+	label
+		margin-bottom: 12px
+		span
+			font-size: em(15px)
+			color: #999
+	input
+		border: $accent-color 4px solid
+		padding: 7px 15px
+	.button
+		margin-top: 20px
+		margin-bottom: 10px
+
+.success
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	text-align: center
+	background-color: #fff
+	z-index: 2
+	font-family: 'RobotoCondensedBold', sans-serif
+	padding: 30px
+	text-transform: uppercase
+	align-items: center
+	display: none
+	&.visible
+		display: flex
+
+//ALWAYS END
+@import "media"
